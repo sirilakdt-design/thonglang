@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap');
+200;300;400;500;600;700;800;900&display=swap');
+/* ===== Role-page base styles (scoped) ===== */
+:root{--green:#70CBC7;--green-dark:#3F9EA5;--green-soft:#E1F5F1;--green-pale:#EFFAF7;--yellow:#EEF7FB;--yellow-soft:#F5FAFC;--bg:#F7FBFC;--card:#FFFFFF;--text:#26484C;--muted:#748B8E;--line:#D6ECEA;--danger:#A95D5D;--shadow:0 8px 24px rgba(61,125,128,.07)}
+body.role-page *{box-sizing:border-box}
+body.role-page{margin:0;min-height:100vh;font-family:"Noto Sans Thai",sans-serif;background:var(--bg);color:#183B38;font-size:14px}
+body.role-page .sidebar{position:fixed;inset:0 auto 0 0;width:260px;height:100vh;padding:24px 14px;background:#20AFA6;color:#183B38;overflow-y:auto;z-index:1000;border-right:1px solid #c6d9bc;box-shadow:2px 0 18px rgba(63,84,50,.05)}
+body.role-page .brand{text-align:center;margin-bottom:28px}body.role-page .logo{width:82px;height:82px;margin:0 auto 10px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid #dce8d4}body.role-page .logo img{width:74px;height:74px;object-fit:contain}body.role-page .brand h2{margin:0;font-size:23px;color:#183B38}body.role-page .brand small{display:block;margin-top:5px;color:#183B38;font-size:11px}body.role-page .menu{list-style:none;padding:0;margin:0}body.role-page .menu li{margin:8px 0}body.role-page .menu a{display:flex;align-items:center;min-height:50px;padding:10px 13px;border:1px solid #d9e7d2;border-radius:14px;color:#183B38;text-decoration:none;font-size:14px;font-weight:700;line-height:1.35;background:rgba(255,255,255,.48);transition:.18s ease}body.role-page .menu a:hover, body.role-page .menu a.active{background:#F3F7F7;color:#183B38;border-color:#eadb8e;transform:none}body.role-page .menu-text{display:block}body.role-page .menu-icon{display:none!important}
+body.role-page .main{margin-left:260px;min-height:100vh;padding:0 28px 40px}body.role-page .page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin:12px 0 22px;padding:24px 28px;border:2px solid #20AFA6;border-radius:30px;background:#DDF5F1;box-shadow:0 4px 12px rgba(0,204,0,.08)}body.role-page .page-head h1{margin:0;color:#183B38;font-size:28px}body.role-page .page-head p{margin:6px 0 0;color:#183B38}
+body.role-page .card{background:var(--card);border:1px solid #D5E9E6;border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:var(--shadow)}body.role-page .card h2{margin:0 0 17px;color:#183B38;font-size:20px}body.role-page .section-title{margin:22px 0 10px;padding:10px 14px;border-radius:12px;background:#DDF5F1;border-left:4px solid #20AFA6;color:#183B38;font-size:16px;font-weight:700}body.role-page .section-title.yellow{background:#F3F7F7;border-left-color:#d9be59}
+body.role-page .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}body.role-page .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}body.role-page .field label{display:block;margin-bottom:7px;font-weight:700;color:#183B38}body.role-page .field input, body.role-page .field select, body.role-page .field textarea{width:100%;padding:11px 12px;border:1px solid #cfdaca;border-radius:10px;background:#fff;color:#183B38;font:inherit}body.role-page .field textarea{min-height:94px;resize:vertical}body.role-page .field input:focus, body.role-page .field select:focus, body.role-page .field textarea:focus{outline:none;border-color:#20AFA6;box-shadow:0 0 0 3px rgba(151,184,130,.16)}body.role-page .field input[readonly]{background:#f7f8f2;color:#183B38}
+body.role-page .actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:18px}body.role-page .btn{display:inline-block;border:1px solid transparent;border-radius:10px;padding:10px 15px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}body.role-page .btn-primary{background:#20AFA6;color:#183B38;border-color:#20AFA6}body.role-page .btn-primary:hover{background:#087F78}body.role-page .btn-secondary{background:#F3F7F7;color:#183B38;border-color:#e2d18b}body.role-page .btn-danger{background:#f6dddd;color:#183B38;border-color:#ecc4c4}body.role-page .btn-warning{background:#F3F7F7;color:#183B38;border-color:#e2c96f}
+body.role-page .alert{padding:12px 14px;border-radius:11px;margin-bottom:18px;border:1px solid transparent}body.role-page .alert-ok{background:#EBF9F1;color:#183B38;border-color:#d6e8cb}body.role-page .alert-error{background:#fff0f0;color:#183B38;border-color:#f1d2d2}body.role-page .alert-info{background:#EDF9F7;color:#183B38;border-color:#CFE9E5}
+body.role-page .table-wrap{overflow:auto;border:1px solid #e3e9df;border-radius:13px;background:#fff}body.role-page .table-wrap table{width:100%;border-collapse:collapse;min-width:760px;background:#fff}body.role-page .table-wrap th, body.role-page .table-wrap td{padding:12px 13px;border-bottom:1px solid #edf0e9;text-align:left;vertical-align:top;color:#183B38}body.role-page .table-wrap th{background:#EDF9F7;color:#183B38;white-space:nowrap}body.role-page .table-wrap tr:last-child td{border-bottom:0}body.role-page .muted{color:#183B38}body.role-page .badge{display:inline-flex;align-items:center;justify-content:center;padding:0;border-radius:0;background:transparent;color:#183B38;font-size:12px;font-weight:700;border:0;min-width:1em}body.role-page .empty{text-align:center;padding:30px;color:#183B38}
+body.role-page .score-box{font-size:28px;font-weight:800;color:#183B38;padding:15px 18px;background:#EDF9F7;border:1px solid #dce9d4;border-radius:14px;margin-top:16px}body.role-page .adl-item{border:1px solid #e1e8dc;border-radius:14px;padding:16px;background:#fff}body.role-page .adl-item label{font-weight:700;display:block;margin-bottom:8px}
+body.role-page .measurement-table{width:100%;border-collapse:separate;border-spacing:0;min-width:800px;border:1px solid #dfe7da;border-radius:14px;overflow:hidden}body.role-page .measurement-table th, body.role-page .measurement-table td{padding:10px 12px;border-right:1px solid #e8ece4;border-bottom:1px solid #e8ece4;vertical-align:middle}body.role-page .measurement-table th:last-child, body.role-page .measurement-table td:last-child{border-right:0}body.role-page .measurement-table tr:last-child td{border-bottom:0}body.role-page .measurement-table thead th{background:#DDF5F1;color:#183B38;text-align:center}body.role-page .measurement-table .group-row td{background:#F3F7F7;font-weight:700;color:#183B38}body.role-page .measurement-table .measure-no{width:58px;text-align:center}body.role-page .measurement-table .measure-unit{width:140px;text-align:center;color:#183B38}body.role-page .measurement-table .normal{width:180px;color:#183B38}body.role-page .measurement-table input, body.role-page .measurement-table select{width:100%;min-width:110px;padding:9px 10px;border:1px solid #cfdaca;border-radius:9px;background:#fff;font:inherit;color:#183B38}body.role-page .measurement-table input:focus{outline:none;border-color:#20AFA6;box-shadow:0 0 0 3px rgba(126,163,110,.18)}
+body.role-page .patient-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0 18px}body.role-page .summary-item{padding:11px 12px;border:1px solid #e3e8df;border-radius:11px;background:#F8FBFB}body.role-page .summary-item span{display:block;color:#183B38;font-size:12px;margin-bottom:3px}body.role-page .summary-item strong{font-size:14px;color:#183B38;font-weight:700}body.role-page .summary-item.full{grid-column:1/-1}
+body.role-page .radio-list{display:grid;gap:9px}body.role-page .radio-option{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid #e0e7dc;border-radius:11px;background:#fff;cursor:pointer}body.role-page .radio-option:hover{background:#F2FAF9}body.role-page .radio-option input{margin-top:3px;accent-color:#20AFA6}body.role-page .radio-option .score{min-width:28px;font-weight:700;color:#183B38}body.role-page .adl-question{padding:18px;border:1px solid #e0e8dc;border-radius:15px;background:#fff;margin-bottom:13px}body.role-page .adl-question h3{font-size:16px;margin:0 0 12px;color:#183B38;line-height:1.5}body.role-page .adl-question .en{font-weight:400;color:#183B38;font-size:13px}
+body.role-page .result-band{display:grid;grid-template-columns:1fr 2fr;gap:12px;margin-top:16px}body.role-page .result-score, body.role-page .result-group{padding:16px 18px;border-radius:14px;border:1px solid #dfe8d9}body.role-page .result-score{background:#DDF5F1}body.role-page .result-group{background:#F3F7F7}body.role-page .result-score small, body.role-page .result-group small{display:block;color:#183B38;margin-bottom:4px}body.role-page .result-score strong{font-size:30px;color:#183B38}body.role-page .result-group strong{font-size:16px;color:#183B38}
+@media(max-width:1050px){body.role-page .patient-summary{grid-template-columns:repeat(2,minmax(0,1fr))}body.role-page .result-band{grid-template-columns:1fr}}
+@media(max-width:900px){body.role-page .sidebar{position:relative;width:100%;height:auto}body.role-page .main{margin-left:0;padding:0 15px 30px}body.role-page .grid, body.role-page .grid-3{grid-template-columns:1fr}body.role-page .page-head{flex-direction:column}body.role-page .menu a{min-height:46px}body.role-page .patient-summary{grid-template-columns:1fr}body.role-page .summary-item.full{grid-column:auto}}
+
+
+/* ===== Global pastel theme ===== */
+/* ============================================================
+   Thonglang Healthcare UI Theme — Luminous Aqua Mint
+   Soft blue + green pastel palette, clean and premium.
+   Loaded last to restyle the UI without changing PHP/DB logic.
+   ============================================================ */
+:root{
+    --theme-deep:#246C73;
+    --theme-deep-2:#1D5960;
+    --theme-teal:#58BFC0;
+    --theme-aqua:#83D5D1;
+    --theme-sky:#DFF2FA;
+    --theme-mint:#DFF5F0;
+    --theme-mint-2:#EFFAF7;
+    --theme-blue-2:#EEF7FB;
+    --theme-bg:#F7FBFC;
+    --theme-card:#FFFFFF;
+    --theme-text:#26484C;
+    --theme-muted:#728B8E;
+    --theme-border:#D6ECEA;
+    --theme-danger:#B96767;
+    --theme-danger-soft:#FFF3F3;
+    --theme-warning:#BD9143;
+    --theme-warning-soft:#FFF9EC;
+    --theme-shadow:0 14px 34px rgba(50,118,121,.10);
+    --theme-shadow-soft:0 7px 20px rgba(50,118,121,.075);
+}
+
+html,body{color:var(--theme-text)}
+body{
+    background:
+      radial-gradient(circle at 100% 0%,rgba(131,213,209,.20),transparent 27%),
+      radial-gradient(circle at 0% 100%,rgba(181,221,240,.18),transparent 30%),
+      linear-gradient(180deg,#FCFEFF 0%,#F3FAFA 100%)!important;
+}
+
+/* Sidebar — light aqua / mint instead of dark green */
+.sidebar{
+    background:
+      linear-gradient(180deg,#CDEFEF 0%,#DCF6F1 50%,#E4F3FA 100%)!important;
+    color:var(--theme-text)!important;
+    border-right:1px solid rgba(82,170,171,.18)!important;
+    box-shadow:7px 0 28px rgba(45,105,110,.08)!important;
+}
+.sidebar .brand h2,.sidebar .brand small,.sidebar .menu a,.sidebar .menu-text{color:var(--theme-deep)!important}
+.sidebar .brand small{opacity:.82}
+.sidebar .logo{
+    background:rgba(255,255,255,.92)!important;
+    border:1px solid rgba(105,191,191,.25)!important;
+    box-shadow:0 10px 24px rgba(44,118,120,.11)!important;
+}
+.sidebar .menu a{
+    background:rgba(255,255,255,.34)!important;
+    border:1px solid rgba(255,255,255,.55)!important;
+    color:var(--theme-deep)!important;
+}
+.sidebar .menu a:hover{
+    background:rgba(255,255,255,.70)!important;
+    border-color:#B9E4E2!important;
+    color:var(--theme-deep-2)!important;
+}
+.sidebar .menu a.active{
+    background:linear-gradient(135deg,#AEE2DF 0%,#C9EEE8 100%)!important;
+    border-color:#A8DCD9!important;
+    color:#1E5F65!important;
+    box-shadow:0 6px 16px rgba(57,135,137,.10)!important;
+}
+
+/* Keep the clean no-icon layout already used by this project. */
+.user-avatar,.user-arrow,.input-icon,.map-location-icon,
+.menu-icon,.icon,.action-icon,.stat-icon,.card-icon{display:none!important}
+
+/* Main shell / topbar */
+.main{background:transparent!important}
+.user-topbar,.header,.topbar{background:transparent!important}
+.page-title,.page-head h1,h1,h2,h3,.title,.stat-value,.card-title{color:var(--theme-text)!important}
+.page-subtitle,.muted,.stat-note,.helper,.help-text{color:var(--theme-muted)!important}
+
+.user-profile-button{
+    background:rgba(255,255,255,.88)!important;
+    border:1px solid #D9ECEB!important;
+    box-shadow:var(--theme-shadow-soft)!important;
+    color:var(--theme-text)!important;
+    backdrop-filter:blur(10px);
+}
+.user-profile-button:hover{background:#fff!important;border-color:#B8DEDE!important}
+.user-login-label,.user-identity,.dropdown-user,.dropdown-identity-list,.user-name{color:var(--theme-muted)!important}
+.user-role,.login-role{color:var(--theme-deep)!important}
+.user-dropdown{
+    background:#fff!important;
+    border:1px solid var(--theme-border)!important;
+    box-shadow:var(--theme-shadow)!important;
+}
+.user-dropdown a:hover{background:var(--theme-mint-2)!important;color:var(--theme-deep)!important}
+
+/* Cards — airy white with pastel edge */
+.card,.form-card,.table-card,.content-card,.panel,.box,.mini-card,.stat-card,.summary-box{
+    background:rgba(255,255,255,.96)!important;
+    border:1px solid var(--theme-border)!important;
+    box-shadow:var(--theme-shadow-soft)!important;
+}
+.stat-card{border-left:4px solid #79CDC9!important}
+.stat-card:nth-child(even){border-left-color:#9BCFE8!important}
+
+/* Hero / page header */
+.hero,.page-head{
+    background:linear-gradient(135deg,#D9F4F0 0%,#E9F7F5 52%,#E8F4FA 100%)!important;
+    color:var(--theme-text)!important;
+    border:1px solid #C6E8E6!important;
+    box-shadow:0 12px 28px rgba(74,146,148,.09)!important;
+}
+.hero *,.page-head *{color:var(--theme-text)!important}
+.hero::before,.hero::after{opacity:.12!important}
+
+/* Inputs */
+input,select,textarea{
+    color:var(--theme-text)!important;
+    background:rgba(255,255,255,.96)!important;
+    border-color:#D8E9EA!important;
+}
+input::placeholder,textarea::placeholder{color:#9AAEB0!important;opacity:1}
+input:focus,select:focus,textarea:focus{
+    border-color:#78C8C7!important;
+    box-shadow:0 0 0 4px rgba(105,195,194,.14)!important;
+    outline:none!important;
+}
+input[readonly],textarea[readonly]{background:#F6FBFB!important}
+
+/* Buttons */
+button,.btn,a.btn{box-shadow:none!important}
+.btn-primary,.save-btn,.submit-btn,.login-btn,.btn-green,.primary,.map-action-search{
+    background:linear-gradient(135deg,#75CFCA 0%,#55B8BD 100%)!important;
+    color:#fff!important;
+    border:1px solid #58B9BC!important;
+    box-shadow:0 7px 15px rgba(68,157,159,.12)!important;
+}
+.btn-primary:hover,.save-btn:hover,.submit-btn:hover,.login-btn:hover,.btn-green:hover,.primary:hover{
+    background:linear-gradient(135deg,#64C4C0 0%,#459FA7 100%)!important;
+    color:#fff!important;
+}
+.btn-secondary,.cancel-btn,.btn-yellow,.secondary,.warning,
+.map-action-open,.map-table-button,.badge,.role-box,.stat,.result-group{
+    background:linear-gradient(135deg,#EFFAF7 0%,#EDF7FB 100%)!important;
+    color:var(--theme-deep)!important;
+    border-color:#CFE8E6!important;
+}
+.btn-danger,.delete-btn,.btn-red,.danger{
+    background:var(--theme-danger-soft)!important;
+    color:#A95757!important;
+    border-color:#F0D3D3!important;
+}
+.logout-btn{background:#FFF4F4!important;color:#A75B5B!important;border:1px solid #F0D6D6!important}
+
+/* Section headings / tables */
+.section-title,
+.measurement-table thead th,
+th,.table thead th,.table th,.status.on,.result-score{
+    background:linear-gradient(90deg,#E2F6F1 0%,#EAF6FA 100%)!important;
+    color:var(--theme-deep)!important;
+    border-color:#D3E9E8!important;
+}
+.section-title{border-left-color:#73C8C5!important}
+.section-title.yellow,.measurement-table .group-row td{
+    background:linear-gradient(90deg,#F0FAF7 0%,#F3F9FC 100%)!important;
+    color:var(--theme-text)!important;
+    border-color:#DDEDEB!important;
+}
+td{color:var(--theme-text)!important}
+.table tbody tr:hover td,table tbody tr:hover td{background:#F4FBFA!important}
+.table-wrap{border-color:var(--theme-border)!important}
+
+/* Informational areas */
+.login-brand,.map-location-card,.map-location-box,.location-box,.info-box,.alert-info,
+.brand-note,.meta-chip,.summary-item,.score-box,.radio-option,.adl-question{
+    background:linear-gradient(135deg,#F0FAF7 0%,#F1F8FB 100%)!important;
+    color:var(--theme-text)!important;
+    border-color:#DCECEB!important;
+}
+.radio-option:hover,.adl-choice:hover{background:#EAF8F5!important;border-color:#BEE3E0!important}
+.alert-ok,.ok{background:#EFFAF4!important;color:#39745E!important;border-color:#D4ECDD!important}
+.alert-error,.error,.err{background:var(--theme-danger-soft)!important;color:#A35454!important;border-color:#F0D4D4!important}
+
+/* Dashboard/chart header bars — pastel, not heavy */
+.card-header,.panel-header,.chart-header,.table-title-bar{
+    background:linear-gradient(90deg,#9BDEDA 0%,#78C9CC 48%,#8BCFDB 100%)!important;
+    color:#184F55!important;
+}
+.card-header *, .panel-header *, .chart-header *, .table-title-bar *{color:#184F55!important}
+
+/* Modals */
+.modal{background:rgba(45,79,82,.24)!important;backdrop-filter:blur(3px)}
+.modal-box{border:1px solid #D9ECEB!important;box-shadow:0 20px 55px rgba(51,103,106,.15)!important}
+
+::selection{background:#C6EEEA;color:#214F53}
+
+@media(max-width:900px){
+    .sidebar{background:linear-gradient(135deg,#CDEFEF 0%,#E4F4F8 100%)!important}
+}
+
+/* =========================================================
+   Consistent spacing below user topbar on every role page
+   ========================================================= */
+body.role-page .user-topbar{
+    margin-bottom:28px;
+}
+
+@media(max-width:900px){
+    body.role-page .user-topbar{
+        margin-bottom:20px;
+    }
+}
+
+/* Global typography override: Noto Sans Thai */
+html, body, body *, button, input, select, textarea, table, th, td, label, a, span, div, p, h1, h2, h3, h4, h5, h6, small, strong, b {
+    font-family: "Noto Sans Thai", sans-serif !important;
+}
+
+/* Remove visible directional arrows from controls */
+.role-page select,body.role-page select{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;background-image:none!important;}
